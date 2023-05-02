@@ -1,0 +1,106 @@
+
+
+
+.form {
+    height: 100%;
+    width:100%;
+    overflow: hidden;
+    overflow-y: auto;
+    display:grid;
+    grid-template-columns: 100%;
+    grid-template-rows: minmax(15%, auto) minmax(70%, auto) minmax(15%, auto);
+    grid-template-areas: 
+        "header"
+        "formContent"
+        "formFooter"
+    ;
+}
+
+.form .form-header {
+    grid-area: header;
+}
+
+.form .form-header h1 {
+    font-size: 20px;
+}
+
+.form .form-header p {
+    font-size: 14px;
+}
+
+.form .form-content {
+    grid-area: formContent;
+    display:flex;
+    gap: 1rem;
+    width:100%;
+}
+
+.form .form-content .img-selector {
+    width: 45%;
+    height: auto !important;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.form .form-content .img-selector img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 25px;
+    border: 1px solid var(--gray-loyal);
+    padding: 1rem;
+    display:block;
+    margin:0 !important;
+    cursor:pointer
+}
+
+.form .form-content .img-selector img.active{
+    border: solid 4px var(--green);
+}
+
+.form .form-content .img-selector .img-selector-title {
+    font-size: 0.5rem;
+}
+
+.form .form-content .fields {
+    width: 50%;
+    height: 100%;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.form .form-content .fields fieldset {
+    margin-bottom: 1rem;
+}
+
+.form .form-content .fields input {
+    height: 2.2rem;
+}
+.form .form-content .fields textarea {
+    border-radius: 25px;
+    display:flex;
+    width: 100%;
+    border: 1px solid var(--gray-loyal);
+    padding: 1rem;
+}
+
+.form .form-footer {
+    grid-area: formFooter;
+    display:flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 1rem;   
+}
+
+.form .form-footer button {
+    border: 1px solid var(--gray-loyal);
+    border-radius: 50px;
+    padding: 0.5rem 2rem;
+    background-color: inherit;
+    cursor:pointer;
+}
+

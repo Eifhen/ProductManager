@@ -1,0 +1,78 @@
+
+
+.home-page {
+    display:grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: minmax(35vh, auto) minmax(65vh, auto);
+    grid-template-areas: 
+        "header header"
+        "info info"
+    ;
+}
+
+.home-page .header {
+    grid-area: header;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    font-size: 1.4rem !important;
+}
+
+.home-page .header h1 {
+    font-size: 2.5rem !important;
+}
+.home-page .header p {
+    width: 800px;
+    text-align: center;
+}
+.home-page .header p span {
+    background-color: var(--gray-light) !important;
+    padding: 0 1rem;
+}
+
+.home-page .info {
+    grid-area: info;
+    display:flex;
+    justify-content: center;
+
+ 
+}
+
+.home-page .info .container {
+    display:flex;
+    gap: 1rem;
+    padding-top: 4rem;
+    justify-content: center;
+    height: 100%;
+    width: 90%;
+
+}
+
+.home-page .info .container .option {
+    height: 200px;
+    width: 300px;
+    background-color: var(--gray-light);
+    border-radius: 35px;
+    cursor: pointer;
+    color: black;
+}
+
+.home-page .info .container .option:hover {
+    box-shadow: var(--shadow-lg);
+    transition: box-shadow 500ms ease-in-out;
+}
+
+.home-page .info .container .option .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    font-size: 2rem !important;
+    padding: 1rem 2rem 0 2rem;
+}
+
+.home-page .info .container .option .info {
+    padding: 1rem 2rem;
+}

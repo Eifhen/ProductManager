@@ -1,0 +1,139 @@
+
+.cart-page {
+    display:grid;
+    grid-template-columns: 100%;
+    grid-template-rows: minmax(15vh, auto) max-content;
+    grid-template-areas: 
+        "header"
+        "container"
+    ; 
+}
+
+.cart-page header {
+    grid-area: header;
+    padding: 1rem;
+}
+
+.cart-page header .banner {
+    background-color: black;
+    width: 100%;
+    padding:2rem;
+    color: white;
+    border-radius: 25px;
+}
+
+.cart-page header .banner h1  {
+    margin-right: 0.5rem;
+}
+
+.cart-page header .banner h1 i {
+    margin-right: 0.5rem;
+    cursor:pointer;
+}
+
+.cart-page .container {
+    grid-area: container;
+    padding: 0 1rem;
+}
+
+.cart-page .container .cart-card {
+  
+    border-radius: 35px;
+    box-shadow: var(--shadow);
+    height: 450px;
+    display:grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 18% 55% 27%;
+    grid-template-areas: 
+        "header"
+        "list"
+        "footer"
+    ;
+    overflow: hidden;
+    background-image: linear-gradient( 180.7deg, rgba(255,255,255,1) 65.1%, rgba(13,14,15,0.18) 112.7% );
+}
+
+.cart-page .container .cart-card .title {
+    grid-area: header;
+    padding: 2rem 3rem;
+}
+
+.cart-page .container .cart-card .title h1 {
+    font-size: 1.5rem;
+}
+
+.cart-page .container .cart-card .list  {
+    grid-area: list;
+    padding: 1rem 2rem 1rem 2rem;
+    overflow-x: scroll;
+    height: 350px;
+    width: 100%;
+    background-color: transparent;
+}
+
+.cart-page .container .cart-card .list .cart-item {
+    border-bottom: 1px solid var(--gray-loyal);
+    padding: 1rem;
+    width: 80%;
+    background-color: transparent;
+ 
+}
+
+.cart-page .container .cart-card .list .cart-item:last-of-type{
+    border:none;
+}
+
+.cart-page .container .cart-card .list .cart-item .content {
+    display:flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cart-page .container .cart-card .list .cart-item .content img {
+    object-fit: contain;
+    object-position: center;
+    height:100%;
+    width: 5%;
+}
+
+.cart-page .container .cart-card .list .cart-item .content h1 {
+    font-size: 1rem;
+}
+
+.cart-page .container .cart-card .list .cart-item .content .remove {
+    font-size: 1.8rem;
+    cursor:pointer;
+}
+
+.cart-page .container .cart-card .list .cart-item .content .remove:hover {
+    color:red;
+}
+
+.cart-page .container .cart-card .footer {
+    grid-area:footer;
+    display:flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0 2rem;
+    background-color: transparent;
+    border:none;
+    gap: 1rem;
+}
+
+.cart-page .container .cart-card .footer button {
+    border:none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor:pointer;
+    padding: 0.8rem 1rem;
+    display:flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--dark);
+    color: whitesmoke;
+}
+
+.cart-page .container .cart-card .footer .total {
+    font-size:1.5rem;
+}

@@ -1,0 +1,45 @@
+.form-delete {
+    height: 100%;
+    display:grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: 
+        "header"
+        "footer"
+    ;
+}
+
+.form-delete .form-header {
+    grid-area: header;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align:center;
+}
+
+.form-delete .form-header h1 {
+    font-size: 2rem;
+}
+
+.form-delete .form-header p {
+    font-size: 1.2rem;
+}
+
+.form-delete .form-footer {
+    grid-area: footer;
+    display:flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 1rem;   
+}
+
+.form-delete .form-footer button {
+    border: 1px solid var(--gray-loyal);
+    border-radius: 50px;
+    padding: 0.7rem;
+    background-color: inherit;
+    cursor:pointer;
+    font-size: 1rem;
+    width: 200px;
+}

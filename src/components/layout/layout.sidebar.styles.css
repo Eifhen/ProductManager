@@ -1,0 +1,43 @@
+
+
+
+
+.layout-sidebar {
+    display:grid;
+    grid-template-columns: 15vw 84vw;
+    grid-template-rows: minmax(90vh, auto) 10vh;
+    grid-template-areas: 
+        "sidebar mainContent"
+        "footer mainContent"
+    ;
+}
+
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.mainContent {
+    grid-area: mainContent;
+}
+
+.footer {
+    border-right: 1px solid var(--gray-loyal);
+    grid-area: footer;
+    background-color: var(--gray-light);
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    gap:0.1rem;
+    color: black;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 12px;
+    padding-bottom: 0.5rem;
+}
+
+.footer small {
+    letter-spacing: 0.5px;
+    font-size: 10px !important;
+}
