@@ -23,8 +23,8 @@ export default function ProductsPage () {
             </header>
             <div class="container">
 
-                <Show when={products} fallback={<>loading...</>}>
-                    <For each={products} fallback={ <>loading...</>}>
+                <Show when={products} fallback={<>No data</>}>
+                    <For each={products} fallback={ <>No data</>}>
                         {(product) =>(
                           <A href={`/products/${product.id}`} class="product-card">
                             <img src={product.img} alt="image" />
